@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="star.png" type="image/x-icon">
     <link href="https://fonts.cdnfonts.com/css/redfive" rel="stylesheet">
     <link href="https://fonts.cdnfonts.com/css/charter-itc-tt" rel="stylesheet">
     <title>StarWars</title>
@@ -15,9 +16,10 @@
     <video id="background-video" autoplay muted loop>
         <source src="fundo.mp4" type="video/mp4">
     </video>
-
     <div class="cima">
         <img src="star.png">
+    </div>
+    <div class="cima">
         <form action="#" method="post">
             <input type="hidden" name="nome" value="Personagens">
             <input type="hidden" name="b" value="https://swapi.dev/api/people">
