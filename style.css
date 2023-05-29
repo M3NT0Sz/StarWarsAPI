@@ -30,6 +30,11 @@ body {
     justify-content: center;
 }
 
+.cima > img{
+    height: 100px;
+    width: auto;
+}
+
 .cima > form > input{
     cursor: pointer;
     margin-top: 20px;

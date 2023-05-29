@@ -17,6 +17,7 @@
     </video>
 
     <div class="cima">
+        <img src="star.png">
         <form action="#" method="post">
             <input type="hidden" name="nome" value="Personagens">
             <input type="hidden" name="b" value="https://swapi.dev/api/people">
