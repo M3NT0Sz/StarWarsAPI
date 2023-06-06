@@ -23,6 +23,11 @@ body {
     z-index: -1;
 }
 
+.batata > img {
+    width: auto;
+    height: 150px;
+}
+
 .cima{
     display: flex;
     flex-direction: row;

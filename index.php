@@ -66,8 +66,10 @@
         $mais = $resultado->next;
         foreach ($resultado->results as $resultados) {
             echo "<form method='post' action='#'>";
+            echo "<div class=batata>";
             echo "<input type='hidden' name='url$nome' value='$resultados->url'>";
             echo "<input type='submit' class='button' style='--color:yellow;cursor:pointer;' name='$nome' value='$resultados->name'>";
+            echo "</div>";
             echo "</form>";
         }
         if ($mais == []) {
@@ -100,7 +102,7 @@
             echo "</form>";
             echo "</div>";
         }
-    echo "</div>";
+        echo "</div>";
     }
     if ($_POST['filmes']) {
         echo "<div class='meio'>";
@@ -143,6 +145,11 @@
         $planetanasc = json_decode(curl_exec($ch2));
         echo "<form method='post' action='#'>";
         echo "<input type='hidden' name='urlPlanetas' value='$planetanasc->url'>";
+        ?>
+        <div class="batata">
+        <img src="<?php echo "StarFotos/StarPlanetas/$planetanasc->name.png"?>"><br>
+        </div>
+        <?php
         echo "<input type='submit' class='button' style='--color:yellow;cursor:pointer;' name='Planetas' value='$planetanasc->name'>";
         echo "</form>";
 
@@ -155,6 +162,11 @@
                 $filme = json_decode(curl_exec($ch2));
                 echo "<form method='post' action='#'>";
                 echo "<input type='hidden' name='urlFilmes' value='$filme->url'>";
+                ?><br>
+                <div class="batata">
+                <img src="<?php echo "StarFotos/StarFilmes/$filme->title.png"?>"><br>
+                </div>
+                <?php
                 echo "<input type='submit' class='button' style='--color:yellow;cursor:pointer;' name='Filmes' value='$filme->title'>";
                 echo "</form>";
             }
@@ -169,6 +181,11 @@
                 $especie = json_decode(curl_exec($ch2));
                 echo "<form method='post' action='#'>";
                 echo "<input type='hidden' name='urlEspecies' value='$especie->url'>";
+                ?><br>
+                <div class="batata">
+                <img src="<?php echo "StarFotos/StarEspecies/$especie->name.png"?>"><br>
+                </div>
+                <?php
                 echo "<input type='submit' class='button' style='--color:yellow;cursor:pointer;' name='Especies' value='$especie->name'>";
                 echo "</form>";
             }
@@ -183,6 +200,11 @@
                 $veiculo = json_decode(curl_exec($ch2));
                 echo "<form method='post' action='#'>";
                 echo "<input type='hidden' name='urlVeiculos' value='$veiculo->url'>";
+                ?><br>
+                <div class="batata">
+                <img src="<?php echo "StarFotos/StarNaves/$veiculo->name.png"?>"><br>
+                </div>
+                <?php
                 echo "<input type='submit' class='button' style='--color:yellow;cursor:pointer;' name='Veiculos' value='$veiculo->name'>";
                 echo "</form>";
             }
@@ -197,6 +219,11 @@
                 $nave = json_decode(curl_exec($ch2));
                 echo "<form method='post' action='#'>";
                 echo "<input type='hidden' name='urlNaves' value='$nave->url'>";
+                ?><br>
+                <div class="batata">
+                <img src="<?php echo "StarFotos/StarVeiculos/$nave->name.png"?>"><br>
+                </div>
+                <?php
                 echo "<input type='submit' class='button' style='--color:yellow;cursor:pointer;' name='Naves' value='$nave->name'>";
                 echo "</form>";
             }
@@ -230,6 +257,11 @@
         $planetanasc = json_decode(curl_exec($ch2));
         echo "<form method='post' action='#'>";
         echo "<input type='hidden' name='urlPlanetas' value='$planetanasc->url'>";
+        ?><br>
+        <div class="batata">
+        <img src="<?php echo "StarFotos/StarPlanetas/$planetanasc->name.png"?>"><br>
+        </div>
+        <?php
         echo "<input type='submit' class='button' style='--color:yellow;cursor:pointer;' name='Planetas' value='$planetanasc->name'>";
         echo "</form>";
 
@@ -242,6 +274,11 @@
                 $pessoa = json_decode(curl_exec($ch2));
                 echo "<form method='post' action='#'>";
                 echo "<input type='hidden' name='urlPersonagens' value='$pessoa->url'>";
+                ?><br>
+                <div class="batata">
+                <img src="<?php echo "StarFotos/StarFotos/$pessoa->name.png"?>"><br>
+                </div>
+                <?php
                 echo "<input type='submit' class='button' style='--color:yellow;cursor:pointer;' name='Personagens' value='$pessoa->name'>";
                 echo "</form>";
             }
@@ -256,6 +293,11 @@
                 $filme = json_decode(curl_exec($ch2));
                 echo "<form method='post' action='#'>";
                 echo "<input type='hidden' name='urlFilmes' value='$filme->url'>";
+                ?><br>
+                <div class="batata">
+                <img src="<?php echo "StarFotos/StarFilmes/$filme->title.png"?>"><br>
+                </div>
+                <?php
                 echo "<input type='submit' class='button' style='--color:yellow;cursor:pointer;' name='Filmes' value='$filme->title'>";
                 echo "</form>";
             }
@@ -294,6 +336,11 @@
                 $piloto = json_decode(curl_exec($ch2));
                 echo "<form method='post' action='#'>";
                 echo "<input type='hidden' name='urlPersonagens' value='$piloto->url'>";
+                ?><br>
+                <div class="batata">
+                <img src="<?php echo "StarFotos/StarFotos/$piloto->name.png"?>"><br>
+                </div>
+                <?php
                 echo "<input type='submit' class='button' style='--color:yellow;cursor:pointer;' name='Personagens' value='$piloto->name'>";
                 echo "</form>";
             }
@@ -308,6 +355,11 @@
                 $filme = json_decode(curl_exec($ch2));
                 echo "<form method='post' action='#'>";
                 echo "<input type='hidden' name='urlFilmes' value='$filme->url'>";
+                ?><br>
+                <div class="batata">
+                <img src="<?php echo "StarFotos/StarFilmes/$filme->title.png"?>"><br>
+                </div>
+                <?php
                 echo "<input type='submit' class='button' style='--color:yellow;cursor:pointer;' name='Filmes' value='$filme->title'>";
                 echo "</form>";
             }
@@ -348,6 +400,11 @@
                 $piloto = json_decode(curl_exec($ch2));
                 echo "<form method='post' action='#'>";
                 echo "<input type='hidden' name='urlPersonagens' value='$piloto->url'>";
+                ?><br>
+                <div class="batata">
+                <img src="<?php echo "StarFotos/StarFotos/$piloto->name.png"?>"><br>
+                </div>
+                <?php
                 echo "<input type='submit' class='button' style='--color:yellow;cursor:pointer;' name='Personagens' value='$piloto->name'>";
                 echo "</form>";
             }
@@ -362,6 +419,11 @@
                 $filme = json_decode(curl_exec($ch2));
                 echo "<form method='post' action='#'>";
                 echo "<input type='hidden' name='urlFilmes' value='$filme->url'>";
+                ?><br>
+                <div class="batata">
+                <img src="<?php echo "StarFotos/StarFilmes/$filme->title.png"?>"><br>
+                </div>
+                <?php
                 echo "<input type='submit' class='button' style='--color:yellow;cursor:pointer;' name='Filmes' value='$filme->title'>";
                 echo "</form>";
             }
@@ -395,6 +457,11 @@
                 $personagem = json_decode(curl_exec($ch2));
                 echo "<form method='post' action='#'>";
                 echo "<input type='hidden' name='urlPersonagens' value='$personagem->url'>";
+                ?><br>
+                <div class="batata">
+                <img src="<?php echo "StarFotos/StarFotos/$personagem->name.png"?>"><br>
+                </div>
+                <?php
                 echo "<input type='submit' class='button' style='--color:yellow;cursor:pointer;' name='Personagens' value='$personagem->name'>";
                 echo "</form>";
             }
@@ -409,6 +476,11 @@
                 $planeta = json_decode(curl_exec($ch2));
                 echo "<form method='post' action='#'>";
                 echo "<input type='hidden' name='urlPlanetas' value='$planeta->url'>";
+                ?><br>
+                <div class="batata">
+                <img src="<?php echo "StarFotos/StarPlanetas/$planeta->name.png"?>"><br>
+                </div>
+                <?php
                 echo "<input type='submit' class='button' style='--color:yellow;cursor:pointer;' name='Planetas' value='$planeta->name'>";
                 echo "</form>";
             }
@@ -422,6 +494,11 @@
                 $nave = json_decode(curl_exec($ch2));
                 echo "<form method='post' action='#'>";
                 echo "<input type='hidden' name='urlNaves' value='$nave->url'>";
+                ?><br>
+                <div class="batata">
+                <img src="<?php echo "StarFotos/StarVeiculos/$nave->name.png"?>"><br>
+                </div>
+                <?php
                 echo "<input type='submit' class='button' style='--color:yellow;cursor:pointer;' name='Naves' value='$nave->name'>";
                 echo "</form>";
             }
@@ -435,6 +512,11 @@
                 $veiculo = json_decode(curl_exec($ch2));
                 echo "<form method='post' action='#'>";
                 echo "<input type='hidden' name='urlVeiculos' value='$veiculo->url'>";
+                ?><br>
+                <div class="batata">
+                <img src="<?php echo "StarFotos/StarNaves/$veiculo->name.png"?>"><br>
+                </div>
+                <?php
                 echo "<input type='submit' class='button' style='--color:yellow;cursor:pointer;' name='Veiculos' value='$veiculo->name'>";
                 echo "</form>";
             }
@@ -448,6 +530,11 @@
                 $especie = json_decode(curl_exec($ch2));
                 echo "<form method='post' action='#'>";
                 echo "<input type='hidden' name='urlEspecies' value='$especie->url'>";
+                ?><br>
+                <div class="batata">
+                <img src="<?php echo "StarFotos/StarEspecies/$especie->name.png"?>"><br>
+                </div>
+                <?php
                 echo "<input type='submit' class='button' style='--color:yellow;cursor:pointer;' name='Especies' value='$especie->name'>";
                 echo "</form>";
             }
@@ -483,6 +570,11 @@
                 $personagem = json_decode(curl_exec($ch2));
                 echo "<form method='post' action='#'>";
                 echo "<input type='hidden' name='urlPersonagens' value='$personagem->url'>";
+                ?><br>
+                <div class="batata">
+                <img src="<?php echo "StarFotos/StarFotos/$personagem->name.png"?>"><br>
+                </div>
+                <?php
                 echo "<input type='submit' class='button' style='--color:yellow;cursor:pointer;' name='Personagens' value='$personagem->name'>";
                 echo "</form>";
             }
@@ -496,6 +588,11 @@
                 $filme = json_decode(curl_exec($ch2));
                 echo "<form method='post' action='#'>";
                 echo "<input type='hidden' name='urlFilmes' value='$filme->url'>";
+                ?><br>
+                <div class="batata">
+                <img src="<?php echo "StarFotos/StarFilmes/$filme->title.png"?>"><br>
+                </div>
+                <?php
                 echo "<input type='submit' class='button' style='--color:yellow;cursor:pointer;' name='Filmes' value='$filme->title'>";
                 echo "</form>";
             }
